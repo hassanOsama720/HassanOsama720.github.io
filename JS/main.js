@@ -17,7 +17,7 @@ if(url && !window.location.href.includes('video.html')){
             baseUrl = baseUrl + '/HTML/video.html';
         }
     }
-    window.location.href = baseUrl;
+    //window.location.href = baseUrl;
 }
 
 window.addEventListener('mouseup',function(event){
