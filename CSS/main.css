@@ -116,7 +116,7 @@ body {
 
 @media (max-width: 768px) {
     .about-details .video {
-        height: 400px;
+        height: 300px;
     }
 
     .services iframe {
@@ -126,7 +126,7 @@ body {
 
 @media (max-width: 576px) {
     .about-details .video {
-        height: 400px;
+        height: 200px;
     }
 
     .services iframe {
