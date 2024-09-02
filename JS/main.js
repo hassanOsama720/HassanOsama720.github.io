@@ -17,6 +17,7 @@ if(url && !window.location.href.includes('video.html')){
             baseUrl = baseUrl + '/HTML/video.html';
         }
     }
+    console.log(baseUrl);
     //window.location.href = baseUrl;
 }
 
