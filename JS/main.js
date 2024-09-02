@@ -4,12 +4,17 @@ let url = urlParams.get('url');
 
 // redirect to /video.html if url is present with the same query string
 if(url && !window.location.href.includes('video.html')){
-    //remove index.html from the url
-    let baseUrl = window.location.href;
+    // baseUrl without query string
+    let baseUrl = window.location.href.split('?')[0];
     if (baseUrl.includes('index.html')) {
         baseUrl = baseUrl.replace('index.html','HTML/video.html');
     }else {
-        baseUrl = baseUrl + '/HTML/video.html';
+        //if the baseUrl ends with a slash
+        if(baseUrl.endsWith('/')){
+            baseUrl = baseUrl + 'HTML/video.html';
+        }else{
+            baseUrl = baseUrl + '/HTML/video.html';
+        }
     }
     window.location.href = baseUrl;
 }
