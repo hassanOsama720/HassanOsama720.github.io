@@ -1,3 +1,19 @@
+let queryString = window.location.search;
+let urlParams = new URLSearchParams(queryString);
+let url = urlParams.get('url');
+
+// redirect to /video.html if url is present with the same query string
+if(url && !window.location.href.includes('video.html')){
+    //remove index.html from the url
+    let baseUrl = window.location.href;
+    if (baseUrl.includes('index.html')) {
+        baseUrl = baseUrl.replace('index.html','HTML/video.html');
+    }else {
+        baseUrl = baseUrl + '/HTML/video.html';
+    }
+    window.location.href = baseUrl;
+}
+
 window.addEventListener('mouseup',function(event){
     let search = document.querySelector('.search');
     let isClickInside = false

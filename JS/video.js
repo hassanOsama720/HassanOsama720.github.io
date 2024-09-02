@@ -1,10 +1,10 @@
-let queryString = window.location.search;
-let urlParams = new URLSearchParams(queryString);
-let url = urlParams.get('url');
+//let queryString = window.location.search;
+//let urlParams = new URLSearchParams(queryString);
+//let url = urlParams.get('url');
 let watchCount = urlParams.get('watchCount') ?? 0;
-let commentCount = urlParams.get('commentCount') ?? 0;
-let likeCount = urlParams.get('likeCount') ?? 0;
-let shareCount = urlParams.get('shareCount') ?? 0;
+let commentCount = urlParams.get('commentsCount') ?? 0;
+let likeCount = urlParams.get('likes') ?? 0;
+let shareCount = urlParams.get('sharesCount') ?? 0;
 //document.getElementById('video').src = url;
 document.getElementById('watchCount').innerText = watchCount;
 document.getElementById('commentCount').innerText = commentCount;
