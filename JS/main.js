@@ -6,6 +6,7 @@ let url = urlParams.get('url');
 if(url && !window.location.href.includes('video.html')){
     // baseUrl without query string
     let baseUrl = window.location.href.split('?')[0];
+    console.log(baseUrl);
     if (baseUrl.includes('index.html')) {
         baseUrl = baseUrl.replace('index.html','HTML/video.html');
     }else {
