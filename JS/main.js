@@ -6,7 +6,6 @@ let url = urlParams.get('url');
 if(url && !window.location.href.includes('video.html')){
     // baseUrl without query string
     let baseUrl = window.location.href.split('?')[0];
-    console.log(baseUrl);
     if (baseUrl.includes('index.html')) {
         baseUrl = baseUrl.replace('index.html','HTML/video.html');
     }else {
@@ -17,8 +16,7 @@ if(url && !window.location.href.includes('video.html')){
             baseUrl = baseUrl + '/HTML/video.html';
         }
     }
-    console.log(baseUrl);
-    //window.location.href = baseUrl;
+    window.location.href = baseUrl + queryString;
 }
 
 window.addEventListener('mouseup',function(event){
