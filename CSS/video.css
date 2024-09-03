@@ -1,12 +1,28 @@
 .icon{
+    width: 70px;
+    height: 50px;
+    display: flex;
+    border-radius: 45%;
+    background: #333333;
+    justify-content: center;
+    gap: 6px;
+    align-items: center;
+    position: absolute;
+    z-index: 2147483647;
+}
+
+.icon1{
     width: 50px;
     height: 50px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
     z-index: 2147483647;
+}
+
+.icon p{
+    margin: 0;
 }
 
 :fullscreen .video .icon, :-webkit-full-screen .video .icon, :-moz-full-screen .video .icon, :-ms-fullscreen .video .icon{
@@ -30,7 +46,7 @@ video::-moz-full-screen {
 
 @media (max-width: 576px) {
     .about-details .video {
-        height: 400px !important;
+        height: 75vh !important;
     }
 
 }
