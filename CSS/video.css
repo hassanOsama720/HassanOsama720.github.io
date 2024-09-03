@@ -20,6 +20,14 @@
     z-index: 2147483647;
 }
 
+video::-webkit-media-controls-fullscreen-button {
+    display: none;
+}
+
+video::-moz-full-screen {
+    display: none;
+}
+
 @media (max-width: 576px) {
     .about-details .video {
         height: 400px !important;
