@@ -114,6 +114,18 @@ body {
 }
 
 
+@media (max-width: 1180px) {
+    .search-button{
+        display: none !important;
+    }
+    .hero {
+        background-image: url('../Assets/Images/background.png');
+        height: 400px;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
 @media (max-width: 768px) {
     .about-details .video {
         height: 300px;
@@ -122,11 +134,19 @@ body {
     .services iframe {
         height: 150px;
     }
+
+    .search-button{
+        display: none !important;
+    }
 }
 
 @media (max-width: 576px) {
     .about-details .video {
         height: 200px;
+    }
+    .hero {
+        background-size: auto;
+        background-position: center;
     }
 
     .services iframe {
@@ -143,6 +163,10 @@ body {
 
     .footer{
         flex-direction: column;
+    }
+
+    .search-button{
+        display: none;
     }
 
 }
