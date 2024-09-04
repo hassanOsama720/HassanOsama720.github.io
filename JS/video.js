@@ -28,3 +28,44 @@ document.querySelector('.video-button').addEventListener('click',function (event
         document.exitFullscreen();
     }
 })
+
+document.querySelector('.video').addEventListener('mousemove',skipButtons);
+document.querySelector('.video').addEventListener('touchstart',skipButtons);
+document.querySelector('#forward').addEventListener('touchstart',function (event) {
+    document.getElementById('video').currentTime += 10;
+});
+document.querySelector('#forward').addEventListener('click',function (event) {
+    document.getElementById('video').currentTime += 10;
+});
+document.querySelector('#backward').addEventListener('touchstart',function (event) {
+    document.getElementById('video').currentTime -= 10;
+});
+document.querySelector('#backward').addEventListener('click',function (event) {
+    document.getElementById('video').currentTime -= 10;
+});
+document.querySelector('#play-stop').addEventListener('click',function (event) {
+    let video = document.getElementById('video');
+    if(video.paused){
+        video.play();
+        document.querySelector('#play').style.display = 'none';
+        document.querySelector('#stop').style.display = 'flex';
+    }else {
+        video.pause();
+        document.querySelector('#play').style.display = 'flex';
+        document.querySelector('#stop').style.display = 'none';
+    }
+});
+let timeout;
+function skipButtons (event) {
+    document.querySelectorAll('.skip').forEach((item) => {
+        item.style.display = 'flex';
+    });
+    if (timeout) {
+        clearTimeout(timeout);
+    }
+    timeout = setTimeout(function () {
+        document.querySelectorAll('.skip').forEach((item) => {
+            item.style.display = 'none';
+        });
+    },3000);
+}
