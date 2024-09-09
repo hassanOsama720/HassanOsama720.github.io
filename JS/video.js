@@ -5,7 +5,7 @@ let watchCount = urlParams.get('watchCount') ?? 0;
 let commentCount = urlParams.get('commentsCount') ?? 0;
 let likeCount = urlParams.get('likes') ?? 0;
 let shareCount = urlParams.get('sharesCount') ?? 0;
-document.getElementById('video').src = url;
+//document.getElementById('video').src = url;
 document.getElementById('video').play();
 document.getElementById('watchCount').innerText = watchCount;
 document.getElementById('commentCount').innerText = commentCount;
