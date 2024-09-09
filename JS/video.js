@@ -29,6 +29,22 @@ document.querySelector('.video-button').addEventListener('click',function (event
     }
 })
 
+document.querySelector('#sound').addEventListener('click', function () {
+    let video = document.getElementById('video');
+    if (video.muted) {
+        video.muted = false;
+        toggleMuteButton(false);
+    }else {
+        video.muted = true;
+        toggleMuteButton(true);
+    }
+});
+
+function toggleMuteButton(isMuted) {
+    document.querySelector('#unmuted').style.display = isMuted ? 'none' : 'flex';
+    document.querySelector('#muted').style.display = isMuted ? 'flex' : 'none';
+}
+
 document.querySelector('.video').addEventListener('mousemove',skipButtons);
 document.querySelector('.video').addEventListener('touchstart',skipButtons);
 document.querySelector('#forward').addEventListener('touchstart',function (event) {
